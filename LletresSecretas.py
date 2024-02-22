@@ -60,16 +60,25 @@ def Pistas(palabra):
     desconocida = "-"
     posicionada = "O"
     desposicion = "X" 
-
-   while True:
-
+    palabra_resuelta = ["-", "-", "-", "-", "-"]
+    
+    count1 = -1
+    count2 = -1
+    while True:
+        resolviendo = str(input("Agrega las 5 letras para resolver: "))
         
-        
- 
+        for i in resolviendo:
+            count1 += 1
+            for j in palabra:
 
-
-        
-
+                
+                if i == j:
+                    print("yes")
+                    
+                    if i == palabra[count1]:
+                        print("yes--2")
+                    
+        print(palabra)
 
 def Programa():
     palabra = Aleatorizador()
