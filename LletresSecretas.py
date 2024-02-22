@@ -36,14 +36,34 @@ def Aleatorizador():
     abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
     "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ]
     
+    palabra = []
     a = 4387438
     b = 98980
     m = 2**32 - 1
     semilla = 343
+    
     for i in range(tamaño_palabra):
         semilla = int(((a * semilla + b) % m) % 27)
         resultado = abc[semilla]
-        print(resultado)
+        palabra.append(resultado)
+    return(palabra)
 
 
-Aleatorizador()
+def Pistas(palabra):
+    desconocida = "-"
+    posicionada = "O"
+    desposicion = "X"
+    intento = 0
+    
+    if intento == 0:
+        print(palabra)
+    
+
+
+
+def Programa():
+    palabra = Aleatorizador()
+    Pistas(palabra)
+    
+    
+Programa()
