@@ -23,6 +23,12 @@
     2.2. Se precisa una funcion principal que gestiones intentos
     y proporcione las pistas
     
+        2.2.1. Para el gestionar si es el primer intento o no se hace un bool
+        en el primer intento todas las palabras estaran ocultas, por cada nuevo 
+        intento se gestiona la pista dada
+        
+        2.2.2. Se comparara el contenido de palabra y palabra oculta
+    
     2.3. Se precisa usar metodos basados en parametros de entrada
     y salida de variables.
     
@@ -50,15 +56,19 @@ def Aleatorizador():
 
 
 def Pistas(palabra):
+   
     desconocida = "-"
     posicionada = "O"
-    desposicion = "X"
-    intento = 0
-    
-    if intento == 0:
-        print(palabra)
-    
+    desposicion = "X" 
 
+   while True:
+
+        
+        
+ 
+
+
+        
 
 
 def Programa():
