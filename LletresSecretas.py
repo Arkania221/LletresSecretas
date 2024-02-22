@@ -11,8 +11,14 @@
 
 2. ¿Como lo hacemos?
 
-    2.1. Se precisa una funcion para generar letras aleatorias,
-    sin importar random.
+    2.1. Se precisa una funcion para generar letras pseudo-aleatorias,
+    sin importar random. ESTO SE TIENE QUE ACLARAR QUE LLEVO UNA HORA
+    MIRANDO COMO COÑO TOMAR UN VALOR QUE VARIE ENTRE INICIOS DE PROGRAMA
+    
+        2.1.2. Utilizo un aleatorizador que hice en un codigo anterior
+    
+        2.1.1. Se creara una lista con las letras del abecedario
+        asi tendremos forma de seleccionarlas
     
     2.2. Se precisa una funcion principal que gestiones intentos
     y proporcione las pistas
@@ -23,3 +29,21 @@
     2.4. No entiendo
 """
 
+tamaño_palabra = 5
+
+def Aleatorizador():
+
+    abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+    "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ]
+    
+    a = 4387438
+    b = 98980
+    m = 2**32 - 1
+    semilla = 343
+    for i in range(tamaño_palabra):
+        semilla = int(((a * semilla + b) % m) % 27)
+        resultado = abc[semilla]
+        print(resultado)
+
+
+Aleatorizador()
