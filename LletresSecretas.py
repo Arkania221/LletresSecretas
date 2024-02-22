@@ -56,33 +56,37 @@ def Aleatorizador():
 
 
 def Pistas(palabra):
-   
     desconocida = "-"
     posicionada = "O"
     desposicion = "X" 
     palabra_resuelta = ["-", "-", "-", "-", "-"]
-    
-    count1 = -1
-    count2 = -1
     while True:
         resolviendo = str(input("Agrega las 5 letras para resolver: "))
-        
+        count1 = -1
+        count2 = -1
         for i in resolviendo:
             count1 += 1
+            count2 = -1
             for j in palabra:
-
-                
+                count2 += 1
                 if i == j:
-                    print("yes")
-                    
+                    palabra_resuelta[count1] = "X"
                     if i == palabra[count1]:
-                        print("yes--2")
-                    
-        print(palabra)
-
+                        palabra_resuelta[count1] = "O"
+                elif i != j and count2 == count1:
+                        palabra_resuelta[count1] = "-"
+        if palabra_resuelta == ["O", "O", "O", "O", "O"]:
+            print("Enhorabuena has acertado la palabra!")
+            break
+        else:
+            for i in palabra_resuelta:
+                print(i, end=" ")
+            print()
+            print("Mal, sigue intentandolo")
+        print()
+        
 def Programa():
     palabra = Aleatorizador()
     Pistas(palabra)
-    
     
 Programa()
